@@ -10,8 +10,6 @@ public class NewKey {
       System.out.println("2. Tabs or number of spaces in a tab (as an integer). ");
       System.out.println("3. Find extra white spaces? (yes or no)");
       System.out.println("4. Would you like a javadoc comment heading? (yes or no)");
-      System.out.println("5. Would you like to check for spacings? (yes or no)");
-      System.out.println("6. Would you like to check for braces? (yes or no)");
 
       Scanner input = new Scanner(System.in);
       String items = input.nextLine();
@@ -23,11 +21,11 @@ public class NewKey {
          list.clear();
          items = input.nextLine();
          list.addAll(Arrays.asList(items.split(" ")));
-      } while (list.size() != 6);
+      } while (list.size() != 4);
       */
 
       // if statement for input less or greater than 6 inputs.
-      if (list.size() != 6) {
+      if (list.size() != 4) {
          System.out.println("Improper input. Start over with correct responses.");
          list.clear();
          items = input.nextLine();
