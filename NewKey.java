@@ -24,7 +24,7 @@ public class NewKey {
          list.addAll(Arrays.asList(items.split(" ")));
       }
 
-      if (true) {
+      //if (true) {
          try {
             int charactersPerLine = Integer.parseInt(list.get(0));
             int tabSpacing = Integer.parseInt(list.get(1));
@@ -34,7 +34,7 @@ public class NewKey {
             items = input.nextLine();
             list.addAll(Arrays.asList(items.split(" ")));
          }
-      }
+     // }
 
       if ((!(list.get(2).equals("yes"))) || ((!(list.get(2).equals("no")))) ||
               ((!(list.get(3).equals("yes")))) || ((!(list.get(3).equals("no"))))) {
@@ -64,15 +64,12 @@ public class NewKey {
 
       String prefs = input.nextLine();
       if (input.hasNext("1") == true) {
-         list.add(input.next());
          System.out.println("Display line numbers to left.");
       }
       if (input.hasNext("2") == true) {
-         list.add(input.next());
          System.out.println("Highlight extra white spaces.");
       }
       if (input.hasNext("3") == true) {
-         list.add(input.next());
          System.out.println("Changes keyword colors");
       }
       if (input.hasNext("no") == true) {
@@ -83,15 +80,12 @@ public class NewKey {
             + "otherwise type \"no\" to end.");
       String secPrefs = input.nextLine();
       if (input.hasNext("1") == true) {
-         list.add(input.next());
          System.out.println("Display line numbers to left.");
       }
       if (input.hasNext("2") == true) {
-         list.add(input.next());
          System.out.println("Highlight extra white spaces.");
       }
       if (input.hasNext("3") == true) {
-         list.add(input.next());
          System.out.println("Changes keyword colors");
       }
       if (input.hasNext("no") == true) {
@@ -102,15 +96,12 @@ public class NewKey {
             + "otherwise type \"no\" to end.");
       String thirdPrefs = input.nextLine();
       if (input.hasNext("1") == true) {
-         list.add(input.next());
          System.out.println("Display line numbers to left.");
       }
       if (input.hasNext("2") == true) {
-         list.add(input.next());
          System.out.println("Highlight extra white spaces.");
       }
       if (input.hasNext("3") == true) {
-         list.add(input.next());
          System.out.println("Changes keyword colors");
       }
       if (input.hasNext("no") == true) {
