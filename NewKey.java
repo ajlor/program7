@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class NewKey {
    public static void main(String[] args) {
-      //ArrayList<String> list = new ArrayList<String>();
       System.out.println("1. Max amount of characters per line (as an integer). ");
       System.out.println("2. Tabs or number of spaces in a tab (as an integer). ");
       System.out.println("3. Find extra white spaces? (yes or no)");
@@ -14,17 +13,15 @@ public class NewKey {
       Scanner input = new Scanner(System.in);
       String items = input.nextLine();
       ArrayList<String> list = new ArrayList<String>(Arrays.asList(items.split(" ")));
+      boolean done = true;
 
-      if (list.size() != 4 || list.isEmpty() == true) {
-         System.out.println("Incorrect amount of inputs. Start over with correct responses "
-               + "in the correct order.");
-         System.out.println("List size: " + list.size() + "\tList :" + list);
-         list.clear();
-         items = input.nextLine();
-         list.addAll(Arrays.asList(items.split(" ")));
-      }
-
-      //if (true) {
+      while (!done) {
+         if (list.size() != 4 || list.isEmpty() == true) {
+            System.out.println("Incorrect amount of inputs. Start over with correct responses "
+                  + "in the correct order.");
+            items = input.nextLine();
+         }
+/*
          try {
             int charactersPerLine = Integer.parseInt(list.get(0));
             int tabSpacing = Integer.parseInt(list.get(1));
@@ -34,17 +31,16 @@ public class NewKey {
             items = input.nextLine();
             list.addAll(Arrays.asList(items.split(" ")));
          }
-     // }
-
-      if ((!(list.get(2).equals("yes"))) || ((!(list.get(2).equals("no")))) ||
-              ((!(list.get(3).equals("yes")))) || ((!(list.get(3).equals("no"))))) {
-         System.out.println("Improper input. Start over with correct responses.");
-         System.out.println("List size: " + list.size() + "\tList :" + list);
-         list.clear();
-         items = input.nextLine();
-         list.addAll(Arrays.asList(items.split(" ")));
+*/
+         if ((!(list.get(2).equals("yes"))) || ((!(list.get(2).equals("no")))) ||
+               ((!(list.get(3).equals("yes")))) || ((!(list.get(3).equals("no"))))) {
+            System.out.println("Improper input. Start over with correct responses.");
+            System.out.println("List size: " + list.size() + "\tList :" + list);
+            list.clear();
+            items = input.nextLine();
+            list.addAll(Arrays.asList(items.split(" ")));
+         }
       }
-
       System.out.println(list);
       System.out.println("\nWould you like to change your vimrc to reflect some of this?"
             + " (yes or no)");
