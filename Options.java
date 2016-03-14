@@ -84,13 +84,13 @@ public class Options{
          Scanner sc = new Scanner(value);
          if (!sc.hasNextInt()){
             System.out.println("Improper Input for editing Options: "+value+
-                               "  integer required for option you specified");
+                                 "  integer required for option you specified");
             return;
          }
          sc.next();
          if (sc.hasNext()){
             System.out.println("Improper Input for editing Options: "+value+
-                               "  integer required for option you specified");
+                                 "  integer required for option you specified");
             return;
          }
       }else{
@@ -108,7 +108,7 @@ public class Options{
    private void write(String fileName, ArrayList list){
       PrintStream p = null;
       try{
-       p = new PrintStream(fileName);
+         p = new PrintStream(fileName);
       }catch (FileNotFoundException e){
          System.out.println("Options file unable to be created");
          return;
@@ -140,14 +140,15 @@ public class Options{
       list.add("false");
       write("Options.txt", list);
    }
-   
+
    private boolean scanThis(String fileName){
       Scanner scan = null;
       boolean passed = false;
       try{
          scan = new Scanner(new File(fileName));
          if (!scan.hasNext()){
-            System.out.println("Previous options not detected, making default Options preferences..");
+            System.out.println("Previous options not detected, making default Options "
+               + "preferences..");
             deFault();
             System.out.println("done");
             scanThis("Options.txt");
@@ -164,8 +165,6 @@ public class Options{
       return passed;
    }
 
-      
-      
 }
 
 

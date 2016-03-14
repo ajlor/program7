@@ -12,7 +12,6 @@ public interface Checkable{
     * @param scan The scanner for the option input.
     */
    public void askForOptions(Options options, Scanner scan);
-   
    /**
     * Method that checks a string for line length,
     * returning true if the string
@@ -24,7 +23,6 @@ public interface Checkable{
     * @return True if the string contains the correct length and false if not.
     */
    public boolean check(String input, Options options);
-   
    /**
     * Method that simply returns the proper error
     * message for a line containing

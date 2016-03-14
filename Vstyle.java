@@ -1,12 +1,11 @@
 /**
- * Vstyle is a program styleguide checker and Vimrc editor. It allows a user to check an exisiting
- * file for correct format, create a new program specifications, and obtain vim tips.
+ * Vstyle is a program styleguide checker and Vimrc editor. It allows a user to check
+ * an exisiting file for correct format, create a new program specifications, and
+ * obtain vim tips.
  * @author Nikki Everson
  * @author Annie Lor
  * @version program 07
  */
-
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.File;
@@ -50,6 +49,26 @@ public class Vstyle{
       }
       else if (args[0].equals("tips")){
          System.out.println("Here are some some useful tips when using vim. ");
+         System.out.println("\nFor basic searching...");
+         System.out.println("\t/pattern" + "\t-search forward for pattern");
+         System.out.println("\t?pattern" + "\t-search backward");
+         System.out.println("\nReformatting...");
+         System.out.println("\tV=" + "\t\t-select text, then reformat with =");
+         System.out.println("\t=" + "\t\t-will correct alignment of code");
+         System.out.println("\t==" + "\t\t-one line");
+         System.out.println("\tgq" + "\t\t-reformat paragraph");
+         System.out.println("\nFor more tips, go to www.cs.oberlin.edu/~kuperman/help/vim");
+         System.out.println("\nIndenting...");
+         System.out.println("These are some variables that you can set in the vim editor  or "
+               +"your vimrc file.");
+         System.out.println("\t:set tabstop 8" + "\t\t-tabs are at proper location");
+         System.out.println("\t:set expandtab" + "\t\t-don't use actual tab character "
+               + "(ctrl-v)");
+         System.out.println("\t:set shiftwidth=4" + "\t-indenting is 4 spaces");
+         System.out.println("\t:set autoindent" + "\t\t-copies the indentation from "
+               + "the previous line when starting a new line");
+         System.out.println("\nFor more tips, go to www.cs.oberlin.edu/~kuperman/help/vim");
+         System.out.println("\n or simply type :help for more vim help.");
       }
       else if (args[0].endsWith(".java")){
          System.out.println("Checking "+args[0]+ "...");
