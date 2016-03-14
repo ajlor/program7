@@ -1,4 +1,10 @@
-
+/**
+ * Vstyle is a program styleguide checker and Vimrc editor. It allows a user to check an exisiting
+ * file for correct format, create a new program specifications, and obtain vim tips.
+ * @author Nikki Everson
+ * @author Annie Lor
+ * @version program 07
+ */
 
 
 import java.util.Scanner;
@@ -8,6 +14,10 @@ import java.io.FileNotFoundException;
 
 public class Vstyle{
 
+   /**
+    * A driver that serves as a menu for the user and prompts the user for inputs to either check
+    * programs style or create a new specification to change their vimrc.
+    */
    public static void main(String[] args){
       ArrayList<Checkable> checks = new ArrayList<Checkable>();
       checks.add(new LineWidth());
