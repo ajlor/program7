@@ -1,12 +1,20 @@
-/** A class describing tabspacing in a string, that implements the Checkable interface.
+/**
+ * A class describing tabspacing in a string, that implements the Checkable interface.
  * Can check for tabspacing and print a proper tabspace error message if
  * the indentation is incorrect via the tabspaces.
  * @author Nikki Everson
+ * @author Annie Lor
  * @version program07
  */
 
 import java.util.Scanner;
 public class TabSpace implements Checkable{
+
+   /**
+    * Prompts user for inputs to put into the Options Object.
+    * @param options The option input from the Scanner.
+    * @param scan The scanner for the option input.
+    */
 
    public void askForOptions(Options o, Scanner scan){
       boolean flag = false;
@@ -35,7 +43,8 @@ public class TabSpace implements Checkable{
    }
 
 
-   /**Method that checks a string for pre-line spacing,
+   /**
+    * Method that checks a string for pre-line spacing,
     * returning true if the string
     * contains pre-line spacing divisible by the amount of spaces
     * specified when constructing
@@ -64,7 +73,8 @@ public class TabSpace implements Checkable{
       return true;
    }
 
-   /** Method that simply returns the proper error
+   /**
+    * Method that simply returns the proper error
     * message for a line containing
     * improper spacing before the the code.
     * @param line The line number that the error occured

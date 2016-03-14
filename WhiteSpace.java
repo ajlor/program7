@@ -1,14 +1,21 @@
-/** A class describing trailing whitespace in a string, that implements the
+/**
+ * A class describing trailing whitespace in a string, that implements the
  * Checkable interface.
  * Can check for trailing whitespace and print a proper
  * whitespace error message.
  * @author Nikki Everson
+ * @author Annie Lor
  * @version program07
  */
 
 import java.util.Scanner;
 public class WhiteSpace implements Checkable{
 
+   /**
+    * Prompts user for inputs to put into the Options Object.
+    * @param options The option input from the Scanner.
+    * @param scan The scanner for the option input.
+    */
    public void askForOptions(Options o, Scanner scan){
       boolean flag = false;
       String input = "";
@@ -28,7 +35,8 @@ public class WhiteSpace implements Checkable{
       }
    }
 
-   /**Method that checks a string for trailing whitespace,
+   /**
+    * Method that checks a string for trailing whitespace,
     * returning true if the string
     * contains no extra whitespace and false if there is
     * any at the end of the line.
@@ -43,7 +51,8 @@ public class WhiteSpace implements Checkable{
       return true;
    }
 
-   /** Method that simply returns the proper error message for a line containing
+   /**
+    * Method that simply returns the proper error message for a line containing
     * trailing whitespace when it should not.
     * @param line The line number that the error occured
     * @return The error message.

@@ -1,8 +1,10 @@
-/**A class that defines Options for the style checker Vstyle. 
- * This class writes to a file the options specified by the set method, 
+/**
+ * A class that defines Options for the style checker Vstyle.
+ * This class writes to a file the options specified by the set method,
  * and if no previous options were stated, creates a default file of options.
- * 
+ *
  * @author Nikki Everson
+ * @author Annie Lor
  * @version program07
  */
 
@@ -15,7 +17,8 @@ import java.io.PrintStream;
 public class Options{
    private ArrayList<String> options = new ArrayList<String>();
 
-   /**Constructs an Options object in which the options from a text file named
+   /**
+    * Constructs an Options object in which the options from a text file named
     * Options.txt are put into list for ease of the get and set methods in this class.
     * If no previous Objects preferences exist, this constructor will make a default set
     * of options in a text file named Options.txt.
@@ -38,7 +41,8 @@ public class Options{
    }
 
 
-   /** Method that gets the value for the specified option. The option is case sensitive
+   /**
+    * Method that gets the value for the specified option. The option is case sensitive
     * so the user must enter the exact option as it is written in the Options.txt file.
     * @param option The exact string of the option you are looking for in the object preferences.
     * @return The string representation of the option's value, (i.e. a string containing an
@@ -61,10 +65,11 @@ public class Options{
 
    }
 
-   /**Method that sets the specified option to the specified value. The option must be 
-    * written exactly as is in the Options.txt file. 
+   /**
+    * Method that sets the specified option to the specified value. The option must be
+    * written exactly as is in the Options.txt file.
     * @param option The exact string of the option you are looking for in the object preferences.
-    * @param value The value you want to set the option to. Can be an integer, true or false 
+    * @param value The value you want to set the option to. Can be an integer, true or false
     * depending on the option speficied.
     */
    public void set(String option, String value){
@@ -115,7 +120,7 @@ public class Options{
                p.println();
             }else{
                p.print(" ");
-            }     
+            }
          }
          p.close();
       }

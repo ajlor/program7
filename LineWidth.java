@@ -1,6 +1,8 @@
-/** A class to check linewidth in a string, that implements the Checkable interface.
+/**
+ * A class to check linewidth in a string, that implements the Checkable interface.
  * Can check for linewidth and print a proper linewidth error message.
  * @author Nikki Everson
+ * @author Annie Lor
  * @version program07
  */
 
@@ -8,7 +10,11 @@ import java.util.Scanner;
 
 public class LineWidth implements Checkable{
 
-
+   /**
+    * Prompts user for inputs to put into the Options Object.
+    * @param options The option input from the Scanner.
+    * @param scan The scanner for the option input.
+    */
    public void askForOptions(Options o, Scanner scan){
       boolean flag = false;
       String s = "";
@@ -37,7 +43,8 @@ public class LineWidth implements Checkable{
 
 
 
-   /**Method that checks a string for line length,
+   /**
+    * Method that checks a string for line length,
     * returning true if the string
     * contains more characters than the number
     * specified when constructing
@@ -56,7 +63,8 @@ public class LineWidth implements Checkable{
    }
 
 
-   /** Method that simply returns the proper error
+   /**
+    * Method that simply returns the proper error
     * message for a line containing
     * improper length.
     * @param line The line number that the error occured

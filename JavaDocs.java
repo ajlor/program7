@@ -1,11 +1,18 @@
 /** A class tha describes how to check if a file properly contains a javadocs header.
  * @author Nikki Everson
+ * @author Annie Lor
  * @version program07
  *
  */
 
 import java.util.Scanner;
 public class JavaDocs implements Checkable{
+
+   /**
+    * Prompts user for inputs to put into the Options Object.
+    * @param options The option input from the Scanner.
+    * @param scan The scanner for the option input.
+    */
 
    public void askForOptions(Options o, Scanner scan){
       boolean flag = false;
@@ -27,7 +34,8 @@ public class JavaDocs implements Checkable{
    }
 
 
-   /**Method that checks a string for javadocs attributes,
+   /**
+    * Method that checks a string for javadocs attributes,
     * returning true if the string
     * contains no all proper attributes for the header and false if not.
     * @param input The string the method is checking.
@@ -53,7 +61,8 @@ public class JavaDocs implements Checkable{
       return passing;
    }
 
-   /** Method that simply returns the proper error message
+   /**
+    * Method that simply returns the proper error message
     * for a line containing
     * insufficient javadoc headings.
     * @param line The line number that the error occured

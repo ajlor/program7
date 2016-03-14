@@ -14,14 +14,23 @@ public interface Checkable{
    public void askForOptions(Options options, Scanner scan);
    
    /**
-    * Checks if the input contains an "option" input.
-    * @param input The user input for desired option.
-    * @param options The option file.
+    * Method that checks a string for line length,
+    * returning true if the string
+    * contains more characters than the number
+    * specified when constructing
+    * the LineWidth object and false if the line is too long.
+    * @param input The string the method is checking.
+    * @param options The options object that has the information on the check.
+    * @return True if the string contains the correct length and false if not.
     */
    public boolean check(String input, Options options);
+   
    /**
-    * Prints out error if an error occurs in an option.
-    * @param line The number line where the error occurred.
+    * Method that simply returns the proper error
+    * message for a line containing
+    * improper length.
+    * @param line The line number that the error occured
+    * @return The error message.
     */
    public String error(int line);
 }
