@@ -29,9 +29,14 @@ public class Vstyle{
          for (Checkable c : checks){
             c.askForOptions(o,scan);
          }
+         System.out.println();
+         System.out.println();
+         getVim(scan);
+
       }else if (args[0].equals("help")){
-         System.out.println("Welcome! This is Vstyle. A source meant to help you "
-               +"check style on your programs as well as changin your vimrc if "+
+         System.out.println("Welcome! This is Vstyle. This is a source meant to "+
+               "help you "+
+               "check style on your programs as well as changing your vimrc if "+
                "desired. Type in 'new' to create new specifications, type 'tips' "+
                "for helpful vim tips, type in the file name to use the existing "+
                "Vstyle guide on that specific file. Note that to use your saved "+
@@ -64,6 +69,62 @@ public class Vstyle{
       }
 
    }
+   private static void getVim(Scanner scan){
+      boolean done = false;
+      boolean correct = false;
+      String str = "";
+      VimEditor vm = null;
+
+      while (!done){
+         System.out.println("Would you also like to change your .vimrc? (yes/no)");
+         str = scan.nextLine();
+         if (str.equals("yes")){
+            String username = "1 1";
+            while (!correct){
+               username = getUsername(scan);
+               try{
+                  vm = new VimEditor(username);
+                  correct = true;
+               }catch (FileNotFoundException e){
+                  System.out.println("Incorret username given, try again.");
+               }
+            }
+            done = true;
+
+         }else if (str.equals("no")){
+            System.out.println("Ok, cool. It's fine, I get it.");
+            done = true;
+         }else{
+            System.out.println("That wasn't a yes or no ya dunce.");
+         }
+      }
+      if (vm != null){
+         vm.askForOptions(scan);
+      }
+   }
+
+
+
+   private static String getUsername(Scanner scan){
+      boolean done = false;
+      String username = "1 1";
+      while (!done){
+         System.out.println("Enter your username for this home directory");
+         username = scan.nextLine();
+         Scanner sc = new Scanner(username);
+         sc.next();
+         if (!sc.hasNext()){
+            done = true;
+         }else{
+            System.out.println("Please only enter one word");
+         }
+      }
+      if (username.equals("1 1")){
+         done = false;
+      }
+      return username;
+   }
+
 
    private static void savedCheck(String fileName, ArrayList<Checkable> Checks, Options o){
       ArrayList<String> errorlist = new ArrayList<String>();
@@ -105,7 +166,7 @@ public class Vstyle{
          scan.close();
       }
       if (errorlist.size() == 0){
-         System.out.println("Wubba Wubba Dubb Dubb! No errors found in this file");
+         System.out.println("Wubba Lubba Dubb Dubb! No errors found in this file");
          System.out.println();
       }else{
          System.out.println("Errors for file: "+fileName);

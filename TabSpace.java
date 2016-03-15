@@ -12,7 +12,7 @@ public class TabSpace implements Checkable{
       boolean flag = false;
       String s = "";
       while (!flag){
-         System.out.println("What should the limit on characters per tab be?");
+         System.out.println("What should the limit on spaces per indent (soft tab) be?");
          s = scan.nextLine();
          Scanner sc = new Scanner(s);
          if (!sc.hasNextInt()){

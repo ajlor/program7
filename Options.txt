@@ -1,0 +1,5 @@
+linewidth 100
+tabspace 3
+tabs true
+whitespace true
+javadocs true

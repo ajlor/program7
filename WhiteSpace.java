@@ -13,7 +13,7 @@ public class WhiteSpace implements Checkable{
       boolean flag = false;
       String input = "";
       while (!flag){
-         System.out.println("Check for trailing whitespace? (yes/no)");
+         System.out.println("Check for trailing/extra whitespace? (yes/no)");
          input = scan.nextLine();
          if (input.equals("yes")){
             o.set("whitespace", "true");
@@ -49,6 +49,6 @@ public class WhiteSpace implements Checkable{
     * @return The error message.
     */
    public String error(int line){
-      return "Failed trailing whitespace check at line: "+line;
+      return "Failed trailing/extra whitespace check at line: "+line;
    }
 }
