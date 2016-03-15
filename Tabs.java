@@ -1,12 +1,19 @@
-/** A class to check for tabs in a string, that implements the Checkable interface.
+/**
+ * A class to check for tabs in a string, that implements the Checkable interface.
  * Can check for tabs and print a proper tabs error message.
  * @author Nikki Everson
+ * @author Annie Lor
  * @version program07
  */
 
 import java.util.Scanner;
 public class Tabs implements Checkable{
 
+   /**
+    * Prompts user for inputs to put into the Options Object.
+    * @param options The option input from the Scanner.
+    * @param scan The scanner for the option input.
+    */
    public void askForOptions(Options o, Scanner scan){
       boolean flag = false;
       String input = "";
@@ -25,7 +32,8 @@ public class Tabs implements Checkable{
       }
    }
 
-   /**Method that checks a string for tabs, returning true if the string
+   /**
+    * Method that checks a string for tabs, returning true if the string
     * contains no tabs and false if there are tab characters.
     * @param input The string the method is checking.
     * @return True if the string contains tabs and false if not.
@@ -39,7 +47,8 @@ public class Tabs implements Checkable{
    }
 
 
-   /** Method that simply returns the proper error message for a line containing
+   /**
+    * Method that simply returns the proper error message for a line containing
     * tabs when it should not.
     * @param line The line number that the error occured
     * @return The error message.
