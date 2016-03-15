@@ -1,5 +1,6 @@
 /**
  * The Checkable interface contains the checking methods.
+ * These methods are required to run a check method.
  * @author Nikki Everson
  * @author Annie Lor
  * @version program07
