@@ -1,3 +1,12 @@
+/**
+ * VimEditor allows the user to edit their vimrc with the preferences inputted
+ * in the command line. VimEditor will look for the vimrc in the home directory
+ * and make a copy of the vimrc. The user inputs for the specific settings will be
+ * written into the vimrc.
+ * @author Nikki Everson
+ * @author Annie Lor
+ */
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
@@ -11,6 +20,13 @@ public class VimEditor{
    private Integer tabspace;
    private String path;
 
+   /**
+    * Method finds the vimrc in the home directory and backs up the file into a file
+    * called "vim_back". The method will throw a FileNotFoundException if the home directory
+    * username is not found.
+    * @param username The username for the home directory (if on the SSH server, it will be your
+    * Cal Poly username).
+    */
    public VimEditor(String username) throws FileNotFoundException{
       path = "//home/"+username+"/.vimrc";
       try{
@@ -63,7 +79,12 @@ public class VimEditor{
       }
    }
 
-
+   /**
+    * Method executes the methods that are used to find line widths, tabspace, coloring,
+    * white space keywords and the method to delete the path that contains the keyword(s).
+    * @param scan The scanner to scan for the keyword that sets the line widths, tabspace,
+    * coloring, and white spaces in the vimrc.
+    */
    public void askForOptions(Scanner scan){
       askLineWidth(scan);
       askTabSpace(scan);

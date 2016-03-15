@@ -7,7 +7,8 @@
 import java.util.Scanner;
 public interface Checkable{
    /**
-    * Prompts user for inputs to put into the Options Object.
+    * Prompts user for inputs to put into the Options Object and scans the input.
+    * If the input is incorrect, it will reprompt for input.
     * @param options The option input from the Scanner.
     * @param scan The scanner for the option input.
     */
