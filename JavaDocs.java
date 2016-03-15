@@ -18,7 +18,7 @@ public class JavaDocs implements Checkable{
       boolean flag = false;
       String input = "";
       while (!flag){
-         System.out.println("Check for trailing JavaDocs heading? (yes/no)");
+         System.out.println("Check for JavaDocs heading? (yes/no)");
          input = scan.nextLine();
          if (input.equals("yes")){
             o.set("javadocs", "true");

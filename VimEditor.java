@@ -60,6 +60,7 @@ public class VimEditor{
       if (preferences.get(2).booleanValue()){
          p.println("\"Vstyle color");
          p.println("syntax on  \"Vstyle");
+
       }
    }
 
@@ -70,16 +71,20 @@ public class VimEditor{
       askColoring(scan);
       askWhiteSpace(scan);
       searchAndDelete(path);
+      System.out.println("\nDone! If you are dissatisfied, you can find a copy of your original "+
+                           "vimrc in a"+
+                           " file called vim_back up in this directory. You can also execute the "+
+                           "program again "+
+                           "with new preferences");
    }
 
    private void askLineWidth(Scanner scan){
       boolean done = false;
       String in = "";
       while (!done){
-         System.out.println("Would you like to change the linewidth in your .vimrc to the "+
+         System.out.println("\nWould you like to change the linewidth in your .vimrc to the "+
                            "currently specified setting in your options? (yes/no)");
-         System.out.println("(Make sure you didn't delete "+
-                           "the Options.txt in your directory.)");
+         System.out.println("Note, this will only autofix comment lines.");
          in = scan.nextLine();
          if (in.equals("yes")){
             Options o = new Options();
@@ -98,10 +103,8 @@ public class VimEditor{
       boolean done = false;
       String in = "";
       while (!done){
-         System.out.println("Would you like to change the tabspacing in your .vimrc to the "+
+         System.out.println("\nWould you like to change the tabspacing in your .vimrc to the "+
                            "currently specified setting in your options? (yes/no)");
-         System.out.println("(Make sure you didn't delete "+
-                           "the Options.txt in your directory.)");
          in = scan.nextLine();
          if (in.equals("yes")){
             Options o = new Options();
@@ -120,7 +123,7 @@ public class VimEditor{
       boolean done = false;
       String in = "";
       while (!done){
-         System.out.println("Would you like coloring? (yes/no)");
+         System.out.println("\nWould you like coloring? (yes/no)");
          in = scan.nextLine();
          if (in.equals("yes")){
             preferences.add(new Boolean(true));
@@ -139,7 +142,7 @@ public class VimEditor{
       String in = "";
 
       while (!done){
-         System.out.println("Would you like to highlight trailing whitespace? (yes/no)");
+         System.out.println("\nWould you like to highlight trailing whitespace? (yes/no)");
          in = scan.nextLine();
          if (in.equals("yes")){
             preferences.add(new Boolean(true));
@@ -153,7 +156,7 @@ public class VimEditor{
       }
       if (done){
          while (!checkeriq){
-            System.out.println("Are you Eriq? (yes/no)");
+            System.out.println("\nAre you Eriq? (yes/no)");
             in = scan.nextLine();
             if (in.equals("yes")){
                System.out.println("\nHa! Lame! Hey guys come look at the cool kid over here!");

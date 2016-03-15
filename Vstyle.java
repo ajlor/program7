@@ -62,18 +62,18 @@ public class Vstyle{
          System.out.println("\t=" + "\t\t-will correct alignment of code");
          System.out.println("\t==" + "\t\t-one line");
          System.out.println("\tgq" + "\t\t-reformat paragraph");
-         System.out.println("\nFor more tips, go to www.cs.oberlin.edu/~kuperman/help/vim");
          System.out.println("\nIndenting...");
          System.out.println("These are some variables that you can set in the vim editor  or "
                +"your vimrc file.");
-         System.out.println("\t:set tabstop 8" + "\t\t-tabs are at proper location");
+         System.out.println("\t:set tabstop=8" + "\t\t-tabs are at proper location");
          System.out.println("\t:set expandtab" + "\t\t-don't use actual tab character "
                + "(ctrl-v)");
          System.out.println("\t:set shiftwidth=4" + "\t-indenting is 4 spaces");
          System.out.println("\t:set autoindent" + "\t\t-copies the indentation from "
                + "the previous line when starting a new line");
          System.out.println("\nFor more tips, go to www.cs.oberlin.edu/~kuperman/help/vim");
-         System.out.println("\n or simply type :help for more vim help.");
+         System.out.println("\nYou can also simply type :help while editing a file for more "+
+                           "vim help.");
       }
       else if (args[0].endsWith(".java")){
          System.out.println("Checking "+args[0]+ "...");
@@ -138,7 +138,7 @@ public class Vstyle{
       boolean done = false;
       String username = "1 1";
       while (!done){
-         System.out.println("Enter your username for this home directory");
+         System.out.println("\nEnter your username for this home directory");
          username = scan.nextLine();
          Scanner sc = new Scanner(username);
          sc.next();
