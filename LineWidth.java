@@ -13,10 +13,11 @@ public class LineWidth implements Checkable{
    /**
     * Prompts user for inputs to put into the Options Object and scans the input.
     * If the input is incorrect, it will reprompt for input.
-    * @param options The option input from the Scanner.
+    * @param o The options input from the Scanner.
     * @param scan The scanner for the option input.
     */
    public void askForOptions(Options o, Scanner scan){
+
       boolean flag = false;
       String s = "";
       while (!flag){
@@ -51,7 +52,7 @@ public class LineWidth implements Checkable{
     * specified when constructing
     * the LineWidth object and false if the line is too long.
     * @param input The string the method is checking.
-    * @param options The options object that has the information on the check.
+    * @param o The options object that has the information on the check.
     * @return True if the string contains the correct length and false if not.
     */
    public boolean check(String input, Options o){
